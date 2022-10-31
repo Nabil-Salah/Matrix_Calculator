@@ -1,0 +1,23 @@
+matrix:
+	Transpose
+	Rank
+	Inverse
+	Scaling
+	raise to the power of x
+	Diagonal matrix
+	Triangular matrix
+	+,-,*
+	issymatric
+	isinvertable
+	
+Solve System
+	check solve
+	interchange
+	scaling 
+	replacement 
+Gaussian elimination
+	echelon form
+Guass-jordon elimination
+	echelon form
+	gaussJordonExtension
+Determinant
