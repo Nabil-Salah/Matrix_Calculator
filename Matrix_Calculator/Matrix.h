@@ -81,6 +81,8 @@ public:
 
 	}
 	vector<vector<double>> getInverse() {
+		if (!this->isInvertable())
+			throw invalid_argument("Matrix cannot be inverted");
 
 	}
 	Matrix<dataType> operator+(Matrix<dataType>& rightOp) {
