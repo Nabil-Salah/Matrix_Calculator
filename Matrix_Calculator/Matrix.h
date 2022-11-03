@@ -75,7 +75,18 @@ public:
 
 	}
 	bool isSymatric() {
-
+		if (this->getNumOfColumns() != this->getNumOfRows())
+			throw invalid_argument("Matrix Isn't Square");
+		int numOfColumns = this->getNumOfColumns();
+		int numOfRows = this->getNumOfRows();
+		for (size_t i = 0; i < numOfColumns; i++)
+		{
+			for (size_t j = 0; j < numOfRows; j++)
+			{
+				if (a[i][j] != a[j][i])return false;
+			}
+		}
+		return true;
 	}
 	bool isInvertable() {
 
