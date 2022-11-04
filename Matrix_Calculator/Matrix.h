@@ -12,17 +12,20 @@ private:
 	int rows;
 	int columns;
 public:
-	Matrix(vector<vector<dataType>>matrix) {
+	Matrix(vector<vector<dataType>>& matrix) {
 		this->matrix = matrix;
 		this->rows = matrix.size();
 		this->columns = matrix[0].size();
 	}
-	Matrix(Matrix &otherMatrix) {
-		matrix = otherMatrix.matrix;
-		rows = otherMatrix.getNumOfRows();
-		columns = otherMatrix.getNumOfColumns();
+	Matrix(Matrix<dataType> &otherMatrix) {
+		this->matrix = otherMatrix.matrix;
+		this->rows = otherMatrix.getNumOfRows();
+		this->columns = otherMatrix.getNumOfColumns();
 	}
-	void operator=(Matrix& otherMatrix) {
+	void operator=(Matrix<dataType>& otherMatrix) {
+		this(otherMatrix);
+	}
+	void operator=(Matrix<dataType> otherMatrix) {
 		this(otherMatrix);
 	}
 	Matrix(int rows = 0,int columns = 0) {
@@ -44,6 +47,9 @@ public:
 		
 	}
 	dataType getEntry(int i, int j) {
+		return matrix[i][j];
+	}
+	dataType& getEntryreferance(int i, int j) {
 		return matrix[i][j];
 	}
 	int rank() {
