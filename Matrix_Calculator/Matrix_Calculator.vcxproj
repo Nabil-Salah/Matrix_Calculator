@@ -130,7 +130,11 @@
     <ClCompile Include="Matrix_Calculator.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Determinant.h" />
+    <ClInclude Include="GuassianElimination.h" />
+    <ClInclude Include="GuassJordon.h" />
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="SolveEquationToolkit.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

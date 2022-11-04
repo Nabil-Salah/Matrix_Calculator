@@ -49,13 +49,6 @@ public:
 	int rank() {
 
 	}
-	void scalling(int number, int row) {
-		int numOfColumns = this->getNumOfColumns();
-		for (size_t i = 0; i < numOfColumns; i++)
-		{
-			matrix[row][i] *= number;
-		}
-	}
 	vector<vector<dataType>> raiseToThePowerOfX(int x) {
 		if (x == 1) {
 			return matrix;
@@ -83,7 +76,7 @@ public:
 		{
 			for (size_t j = 0; j < numOfRows; j++)
 			{
-				if (a[i][j] != a[j][i])return false;
+				if (this->getEntry(i,j) != this->getEntry(j,i))return false;
 			}
 		}
 		return true;
